@@ -10,13 +10,13 @@
     <header>
         <h1>Selamat Datang di Website</h1>
     </header>
-    
+
     <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">Tentang</a></li>
-        <li><a href="#">Layanan</a></li>
-        <li><a href="#">Kontak</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="service.html">Layanan</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
     </ul>
 </nav>
 
@@ -29,37 +29,39 @@
             <li><a href="#">Link 3</a></li>
         </ul>
     </aside>
+    
     <main class="content">
-     <h2>Hubungi Kami via WhatsApp</h2>
-     <form id="formWA">
-        <label for="nama">Nama:</label>
-        <input type="text" id="nama" name="nama" required>
-        <label for="pesan">Pesan:</label>
-        <textarea id="pesan" name="pesan" rows="5" required></textarea>
-        <button type="submit">Kirim ke WhatsApp</button>
-    </form>
-    </main>
+        <h2>Hubungi Kami via WhatsApp</h2>
+        <form id="formWA">
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" required>
+      
+          <label for="pesan">Pesan:</label>
+          <textarea id="pesan" name="pesan" rows="5" required></textarea>
+      
+          <button type="submit">Kirim ke WhatsApp</button>
+        </form>
+      </main>
+      
 </div>
+
 <footer>
     <p>&copy; 2025 Website Saya</p>
-</footer>
+  </footer>
   <script>
     document.getElementById("formWA").addEventListener("submit", function(event) {
       event.preventDefault();
-
-      // Ambil nilai input
+  
       var nama = document.getElementById("nama").value;
       var pesan = document.getElementById("pesan").value;
+  
+      var noWA = "6289666629925"; // ganti dengan nomor kamu sendiri
 
-      // Nomor WhatsApp tujuan (gunakan format internasional, tanpa + atau 0 di depan)
-      var noWA = "6281235810578"; // ganti dengan nomor kamu sendiri
-
-      // Gabungkan pesan
-      var teks = 'Halo, saya ${nama}.%0A${pesan}';
-
-      // Buka link WhatsApp
-      window.open('https://wa.me/${6281235810578}?text=${teks}', "_blank");
+      var teks = `Halo, saya ${nama}.%0A${pesan}`;
+  
+      window.open(`https://wa.me/${noWA}?text=${teks}`, "_blank");
     });
   </script>
+  
 </body>
 </html>
